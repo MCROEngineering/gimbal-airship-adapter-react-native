@@ -26,7 +26,7 @@ abstract class RtnGimbalAirshipAdapterSpec extends ReactContextBaseJavaModule {
 
   public abstract void stop();
 
-  public abstract void restore(Promise promise);
+  public abstract void restore();
 
   public abstract void getGdprConsentRequirement(Promise promise);
 

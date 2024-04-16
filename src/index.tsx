@@ -166,8 +166,8 @@ export const GimbalAirshipAdapter: GimbalAirshipAdapterSpec = {
     GimbalAirshipAdapterModule.stop();
   },
 
-  restore(): Promise<boolean> {
-    return GimbalAirshipAdapterModule.restore();
+  restore() {
+    GimbalAirshipAdapterModule.restore();
   },
 
   /**

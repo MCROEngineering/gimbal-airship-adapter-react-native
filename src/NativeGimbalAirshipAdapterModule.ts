@@ -8,7 +8,7 @@ export interface Spec extends TurboModule {
   setGimbalApiKey(gimbalApiKey: string): void;
   start(gimbalApiKey: string): Promise<boolean>;
   stop(): void;
-  restore(): Promise<boolean>;
+  restore(): void;
   isStarted(): Promise<boolean>;
   getGdprConsentRequirement(): Promise<Int32>;
   setUserConsent(consentType: Int32, state: Int32): void;

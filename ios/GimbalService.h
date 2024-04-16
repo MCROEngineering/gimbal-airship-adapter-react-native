@@ -72,7 +72,7 @@
  *
  * @return Boolean indicating whether or not the Adapter was started.
  */
-- (BOOL)restore;
+- (void)restore;
 
 /**
  * Stops the service.

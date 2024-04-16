@@ -31,9 +31,8 @@ export interface Spec {
 
   /**
    * Stops the Gimbal Adapter.
-   * @return A promise with a boolean result indicating whether the adapter successfully started.
    */
-  restore(): Promise<boolean>;
+  restore(): void;
 
   /**
    * Checks if the adapter is started.

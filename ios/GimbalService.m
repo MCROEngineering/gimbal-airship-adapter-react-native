@@ -105,7 +105,6 @@ static id _sharedObject = nil;
 
 - (BOOL)restore {
     [AirshipAdapter.shared restore];
-    return [AirshipAdapter.shared isStarted];
 }
 
 -(void)setAnalyticsId:(NSString *)id {

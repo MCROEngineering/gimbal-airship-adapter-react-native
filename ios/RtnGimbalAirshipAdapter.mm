@@ -65,8 +65,7 @@ RCT_EXPORT_METHOD(stop) {
 }
 
 RCT_EXPORT_METHOD(restore) {
-    [[GimbalService shared] restore];
-    resolve(@([[GimbalService shared] isStarted]));
+    [[GimbalService shared] stop];
 }
 
 RCT_REMAP_METHOD(isStarted,

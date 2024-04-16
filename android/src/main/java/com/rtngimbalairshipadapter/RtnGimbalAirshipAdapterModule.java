@@ -139,10 +139,8 @@ public class RtnGimbalAirshipAdapterModule extends RtnGimbalAirshipAdapterSpec {
   }
 
   @ReactMethod
-  public void restore(Promise promise) {
+  public void restore() {
     airshipAdapter().restore();
-
-    promise.resolve(airshipAdapter().isStarted());
   }
 
   @ReactMethod
