@@ -139,6 +139,13 @@ public class RtnGimbalAirshipAdapterModule extends RtnGimbalAirshipAdapterSpec {
   }
 
   @ReactMethod
+  public void restore(Promise promise) {
+    airshipAdapter().restore();
+
+    promise.resolve(airshipAdapter().isStarted());
+  }
+
+  @ReactMethod
   public void getGdprConsentRequirement(Promise promise) {
     String result = convertConsentRequirement(PrivacyManager.getInstance().getGdprConsentRequirement());
     promise.resolve(result);

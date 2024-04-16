@@ -37,17 +37,17 @@ static id _sharedObject = nil;
     self = [super init];
     if (self) {
         _defaults = [[NSUserDefaults alloc] initWithSuiteName:defaultsSuiteName];
-        
+
         AirshipAdapter.shared.delegate = self;
-        
+
         if (![self didSetCustomEntryTrackingPreference]) {
             AirshipAdapter.shared.shouldTrackCustomEntryEvents = true;
         }
-        
+
         if (![self didSetCustomExitTrackingPreference]) {
             AirshipAdapter.shared.shouldTrackCustomExitEvents = true;
         }
-        
+
         if (![self didSetRegionEventTrackingPreference]) {
             AirshipAdapter.shared.shouldTrackRegionEvents = false;
         }
@@ -101,6 +101,11 @@ static id _sharedObject = nil;
 
 - (void)stop {
     [AirshipAdapter.shared stop];
+}
+
+- (BOOL)restore {
+    [AirshipAdapter.shared restore];
+    return [AirshipAdapter.shared isStarted];
 }
 
 -(void)setAnalyticsId:(NSString *)id {

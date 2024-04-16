@@ -166,6 +166,10 @@ export const GimbalAirshipAdapter: GimbalAirshipAdapterSpec = {
     GimbalAirshipAdapterModule.stop();
   },
 
+  restore(): Promise<boolean> {
+    return GimbalAirshipAdapterModule.restore();
+  },
+
   /**
    * Checks if the adapter is started.
    * @return A promise with the result.

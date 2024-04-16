@@ -48,7 +48,7 @@ RCT_EXPORT_METHOD(removeListeners:(NSInteger)count) {
 }
 
 RCT_EXPORT_METHOD(setApiKey:(NSString *)apiKey) {
-    
+
 }
 
 RCT_REMAP_METHOD(start,
@@ -62,6 +62,11 @@ RCT_REMAP_METHOD(start,
 
 RCT_EXPORT_METHOD(stop) {
     [[GimbalService shared] stop];
+}
+
+RCT_EXPORT_METHOD(restore) {
+    [[GimbalService shared] restore];
+    resolve(@([[GimbalService shared] isStarted]));
 }
 
 RCT_REMAP_METHOD(isStarted,
